@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/register.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+  />
+  </head>
+  <body>
+    <!-- navbar section -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="/public/asset/logo.png" alt="" /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-danger fw-bold"
+                aria-current="page"
+                href="/"
+                >HOME</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-danger fw-bold" href="/project"
+                >ADD PROJECT</a
+              >
+            </li>
+          </ul>
+          {{if .Data.IsLogin}}
+          <a
+            href="#"
+            style="background-color: orangered; border: none"
+            class="btn btn-outline-success text-light ms-5"
+            type="submit"
+          >
+            HALLO , {{.Data.Username}}
+          </a>
+          <a
+            href="/contact"
+            style="background-color: orangered; border: none"
+            class="btn btn-outline-success text-light ms-5"
+            type="submit"
+          >
+            REGISTER
+          </a>
+          {{else}}
+          <a
+          href="/login"
+          style="background-color: orangered; border: none"
+          class="btn btn-outline-success text-light ms-5"
+          type="submit"
+        >
+          LOGIN
+        </a>
+        <a
+          href="/register"
+          style="background-color: orangered; border: none"
+          class="btn btn-outline-success text-light ms-5"
+          type="submit"
+        >
+          REGISTER
+        </a>
+        {{end}}
+
+
+
+
+
+
+
+
+
+
+
+          <a
+            href="/contact"
+            style="background-color: orangered; border: none"
+            class="btn btn-outline-success text-light ms-5"
+            type="submit"
+          >
+            CONTACT
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar section -->
+
+    <div class="container">
+      <div class="card">
+
+        <form action="/register" method="post">
+          <div class="colom">
+            <label for="name">NAME</label>
+            <br />
+            <input name="name" type="text" />
+          </div>
+          <div class="colom">
+            <label for="email">EMAIL</label>
+            <br />
+            <input name="email" type="email" />
+          </div>
+          <div class="colom">
+            <label for="password">PASSWORD</label>
+            <br />
+            <input name="password" type="password" />
+          </div>
+          <center>
+              <button class="submit" >Submit</button>
+          </center>
+          
+        </form>
+
+      </div>
+    </div>
+  </body>
+</html>

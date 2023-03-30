@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAIN CONTENT</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+  </head>
+
+  <body style="background-color: aliceblue">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="/public/asset/logo.png" alt="" /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-danger fw-bold"
+                aria-current="page"
+                href="/"
+                >HOME</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-danger fw-bold" href="/project"
+                >ADD PROJECT</a
+              >
+            </li>
+          </ul>
+          {{if .Data.IsLogin}}
+          <a
+            href="#"
+            style="background-color: orangered; border: none"
+            class="btn btn-outline-success text-light ms-5"
+            type="submit"
+          >
+            HALLO , {{.Data.Username}}
+          </a>
+          <a
+            href="/contact"
+            style="background-color: orangered; border: none"
+            class="btn btn-outline-success text-light ms-5"
+            type="submit"
+          >
+            REGISTER
+          </a>
+          {{else}}
+          <a
+          href="/login"
+          style="background-color: orangered; border: none"
+          class="btn btn-outline-success text-light ms-5"
+          type="submit"
+        >
+          LOGIN
+        </a>
+        <a
+          href="/register"
+          style="background-color: orangered; border: none"
+          class="btn btn-outline-success text-light ms-5"
+          type="submit"
+        >
+          REGISTER
+        </a>
+        {{end}}
+
+
+
+
+
+
+
+
+
+
+
+          <a
+            href="/contact"
+            style="background-color: orangered; border: none"
+            class="btn btn-outline-success text-light ms-5"
+            type="submit"
+          >
+            CONTACT
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="w-100 d-flex justify-content-center mt-5 bg-white">
+        <!-- left section -->
+        <div class="kiri">
+          <div class="declaration p-5">
+            <h2>Hi welcome to my hut</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+              molestias laboriosam non in ducimus animi provident placeat omnis
+              eum expedita quidem nisi, facilis dignissimos fuga hic sint saepe
+              soluta possimus deleniti? Et esse eligendi vel, aliquam corporis
+              provident debitis possimus aspernatur quidem itaque perspiciatis
+              nesciunt eum omnis sapiente explicabo harum quo! Quae ipsa rem ad
+              maxime, in est exercitationem alias error explicabo illo sed
+              cumque laborum libero nisi distinctio. Expld reprehenderit.
+            </p>
+          </div>
+
+          <div class="innersec d-flex mt-5">
+            <!-- button -->
+            <div>
+              <a
+                href="/contact"
+                style="background-color: orangered; border: none"
+                class="btn btn-outline-success text-light ms-5"
+                type="submit"
+              >
+                CONTACT
+              </a>
+              <!-- <a href="/CONTACT/contact.html">CONTACT</a> -->
+            </div>
+            <!-- button -->
+            <a
+              style="text-decoration: none"
+              class="m-auto mt-1 fw-bold text-dark ms-5"
+              href="/"
+              >download CV
+              <img
+                style="height: 30px; width: 30px"
+                src="/public/asset/download.png"
+                alt="tidak ada gambar"
+            /></a>
+          </div>
+
+          <div class="d-flex">
+            <a href="#"
+              ><img
+                style="height: 40px; width: 40px"
+                class="mt-5 ms-5 mb-5"
+                src="/public/asset/linkedln.png"
+                alt="none"
+            /></a>
+            <a href="https://wa.me/683865716913"
+              ><img
+                style="height: 40px; width: 40px"
+                class="mt-5 ms-3 mb-5"
+                src="/public/asset/wa.png"
+                alt="none"
+            /></a>
+            <a href="https://github.com/intizam11"
+              ><img
+                style="height: 40px; width: 40px"
+                class="mt-5 ms-3 mb-5"
+                src="/public/asset/github.png"
+                alt="none"
+            /></a>
+          </div>
+        </div>
+        <!-- left section -->
+
+        <!-- right section -->
+        <div class="kanan">
+          <div
+            class="card"
+            style="width: 18rem; margin-top: 80px; margin-right: 20px"
+          >
+            <img
+              style="height: 250px"
+              src="/public/asset/mainPhoto.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Intizam k a</h5>
+              <p class="card-text fw-bold">FULLSTACK DEV "soon"</p>
+            </div>
+          </div>
+          <div class="kanan-bawah">
+            <div class="nama"></div>
+          </div>
+        </div>
+        <!-- right section -->
+      </div>
+    </div>
+
+    <div class="container w-100 mt-5 bg-white">
+      <div class="title text-center mt-5">
+        <h1
+          style="font-family: Arial, Helvetica, sans-serif; font-weight: bold"
+          class="p-5"
+        >
+          MY PROJECT
+        </h1>
+      </div>
+      <div
+        class="main-content mt-5 atas d-flex mb-5 style="
+        style="height: 500px"
+      >
+
+      {{range $index, $project := .Projects}}
+        <div class="card" style="width: 300px; height: 400px; margin: 20px; box-shadow: 10px 10px 10px grey;">
+          <img
+            class="card-img-top"
+            src="/uploads/{{$project.Image}}"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{$project.Name}}</h5>
+            <p>{{$project.Dif}}</p>
+            <p class="card-text">
+              {{$project.Description}}
+            </p>
+            {{range $index, $image := $project.Technologies}}
+            <i class="fa-brands fa-{{$image}}"></i>
+            {{end}} 
+            <div style="width: 100%" class="btn d-flex">
+              <a
+                style="width: 50%; background-color: orangered; border: none"
+                href="/delete/{{$project.Id}}"
+                class="btn btn-primary me-3"
+                >DELETE</a
+              >
+              <a
+                style="width: 50%; background-color: orangered; border: none"
+                href="/update/{{$project.Id}}"
+                class="btn btn-primary"
+                >UPDATE</a
+              >
+            </div>
+          </div>
+        </div>
+        {{end}}
+      </div>
+    </div>
+  </body>
+</html>

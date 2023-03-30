@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+  />
+    <link rel="stylesheet" href="/public/css/blog.css" />
+    <title>CREATING-BLOG</title>
+  </head>
+  <body>
+    <!-- navbar section -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="/public/asset/logo.png" alt="" /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-danger fw-bold"
+                aria-current="page"
+                href="/"
+                >HOME</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-danger fw-bold" href="/project"
+                >ADD PROJECT</a
+              >
+            </li>
+          </ul>
+          {{if .Data.IsLogin}}
+          <a
+            href="#"
+            style="background-color: orangered; border: none"
+            class="btn btn-outline-success text-light ms-5"
+            type="submit"
+          >
+            HALLO , {{.Data.Username}}
+          </a>
+          <a
+            href="/contact"
+            style="background-color: orangered; border: none"
+            class="btn btn-outline-success text-light ms-5"
+            type="submit"
+          >
+            REGISTER
+          </a>
+          {{else}}
+          <a
+          href="/login"
+          style="background-color: orangered; border: none"
+          class="btn btn-outline-success text-light ms-5"
+          type="submit"
+        >
+          LOGIN
+        </a>
+        <a
+          href="/register"
+          style="background-color: orangered; border: none"
+          class="btn btn-outline-success text-light ms-5"
+          type="submit"
+        >
+          REGISTER
+        </a>
+        {{end}}
+
+
+
+
+
+
+
+
+
+
+
+          <a
+            href="/contact"
+            style="background-color: orangered; border: none"
+            class="btn btn-outline-success text-light ms-5"
+            type="submit"
+          >
+            CONTACT
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar section -->
+
+    <div id="container">
+      <div class="form-input">
+        <form action="/new-blog" method="post" enctype="multipart/form-data">
+          <div class="section1">
+            <label  class="judul" for="inputtext">PROJECTNAME</label>
+            <br />
+            <input name="projectname" type="text" id="projectName" />
+          </div>
+
+          <div class="date">
+            <div class="sectionDate1">
+              <label for="startdate">START DATE</label>
+              <br />
+              <input name="startDate" type="date" id="startDate" />
+            </div>
+            <div class="sectionDate2">
+              <label for="enddate">End Date:</label>
+              <br />
+              <input name="endDate" type="date" id="endDate" />
+            </div>
+          </div>
+
+          <div class="section1">
+            <label for="description">DESCRIPTION</label>
+            <br />
+            <input name="description" type="text" id="description" />
+          </div>
+
+          <div class="image">
+            <label for="image">IMAGE</label>
+            <br />
+            <input name="upload-image" type="file" id="image" />
+            <br />
+          </div>
+          <div class="slicer">
+            <h4>TECHNOLOGIES</h4>
+          </div>
+
+          <div class="checkbox">
+            <div class="checkbox1">
+              <input name="technologi1" type="checkbox" id="checkbox1" value="js" />
+              <label for="checkbox">JAVASCRIPT</label>
+              <br />
+              <input name="technologi2" type="checkbox" id="checkbox2" value="php"/>
+              <label for="checkbox">PHP</label>
+            </div>
+            <div class="checkbox2">
+              <input name="technologi3" type="checkbox" id="checkbox3" value="golang"/>
+              <label for="checkbox">GOLANG</label>
+              <br />
+              <input name="technologi4" type="checkbox" id="checkbox4" value="python"/>
+              <label for="checkbox">PYTHON</label>
+            </div>
+          </div>
+          <div class="section">
+            <div class="button">
+              <button class="submit-button">
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+
+  </body>
+</html>
